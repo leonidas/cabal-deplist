@@ -22,6 +22,6 @@ pkgDescParser = Map.fromList <$> sections where
     sections      = many1 section
     section       = (,) <$> sectionTitle <*> sectionLines
     sectionTitle  = takeWhile1 isTitleChar <* ":"
-    isTitleChar c = isAlpha c || c == '-'
+    isTitleChar c = isAlpha c || c == '-'
     sectionLines  = many1 sectionLine
     sectionLine   = many1 space *> takeTill isEndOfLine <* endOfLine

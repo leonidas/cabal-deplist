@@ -19,7 +19,7 @@ getPackageDeps desc = mapMaybe (simpleParse . T.unpack) deps where
         ("", _) -> t
         (t', _) -> T.init t'
 
-    deps = map removeHash $ getPkgField desc "depends"
+    deps = map removeHash $ getPkgField desc "depends"
 
 readPackageDeps :: PackageIdentifier -> IO [PackageIdentifier]
 readPackageDeps = fmap getPackageDeps . readPkgDesc

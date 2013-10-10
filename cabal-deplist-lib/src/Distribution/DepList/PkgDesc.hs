@@ -18,15 +18,15 @@ import Distribution.DepList.PkgDesc.Parser
 import qualified Data.Map as Map
 
 getPkgField :: PkgDesc -> Text -> [Text]
-getPkgField pkgDesc key = Map.findWithDefault [] key pkgDesc
+getPkgField pkgDesc key = Map.findWithDefault [] key pkgDesc
 
 readPkgDesc :: PackageIdentifier -> IO PkgDesc
 readPkgDesc pkgId =
 
     runResourceT
-        $ sourceCmd cmd
+        $ sourceCmd cmd
         $= decode utf8
-        $$ sinkParser pkgDescParser
+        $$ sinkParser pkgDescParser
 
     where cmd = "ghc-pkg describe \"" ++ display pkgId ++ "\""
 

@@ -11,4 +11,4 @@ import Distribution.Package (PackageIdentifier)
 readDirectDeps :: IO [PackageIdentifier]
 readDirectDeps = do
     bi <- getPersistBuildConfig "dist"
-    return $ map snd $ externalPackageDeps bi
+    return $ map snd $ externalPackageDeps bi

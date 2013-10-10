@@ -29,5 +29,5 @@ main = do
         toRow (pkgId, license) = [display pkgId, T.unpack license]
     findRecursiveDeps query direct
         $= CL.map toRow
-        $= fromCSV defCSVSettings
-        $$ CB.sinkHandle stdout
+        $= fromCSV defCSVSettings
+        $$ CB.sinkHandle stdout
