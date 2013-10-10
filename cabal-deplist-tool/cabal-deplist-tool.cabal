@@ -5,12 +5,12 @@ name:                cabal-deplist-tool
 version:             0.1.0.0
 -- synopsis:
 -- description:
--- license:
+license:             MIT
 license-file:        LICENSE
 author:              Sami Hangaslammi
 maintainer:          sami.hangaslammi@leonidasoy.fi
--- copyright:
--- category:
+copyright:           2013 Leonidas Oy
+category:            Distribution
 build-type:          Simple
 -- extra-source-files:
 cabal-version:       >=1.10
